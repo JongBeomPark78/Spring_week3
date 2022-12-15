@@ -1,11 +1,9 @@
 package com.example.projectbluehair.common.security.jwt;
 
 import com.example.projectbluehair.common.security.UserDetailsServiceImpl;
-import com.example.projectbluehair.common.security.exception.CustomSecurityException;
 import com.example.projectbluehair.common.security.exception.CustomSecurityErrorCode;
-import com.example.projectbluehair.member.entity.Member;
+import com.example.projectbluehair.common.security.exception.CustomSecurityException;
 import com.example.projectbluehair.member.entity.MemberRole;
-import com.example.projectbluehair.member.repository.MemberRepository;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import lombok.RequiredArgsConstructor;
@@ -20,7 +18,6 @@ import org.springframework.util.StringUtils;
 
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.security.Key;
 import java.util.Base64;
 import java.util.Date;
