@@ -24,7 +24,6 @@ public class CommentController {
     //댓글 작성하기
     @PostMapping("/forum/comment/{forumId}")
     public ResponseEntity<ResponseDto> commentPost(@PathVariable long forumId, @RequestBody CommentSaveRequestDto requestDto, @AuthenticationPrincipal UserDetailsImpl userDetails){
-        //System.out.println("Controller parentCommentId = " + requestDto.getParentCommentId());
         CommentSaveResponseDto data = commentService.commentPost(requestDto.tocommentDto(), userDetails.getMember(), forumId);
         return successResponse.respondDataOnly(HttpStatus.CREATED, data);   //데이터만 전송.
     }

@@ -1,11 +1,10 @@
 package com.example.projectbluehair.forum.entity;
 
-import com.example.projectbluehair.comment.entity.Comment;
 import com.example.projectbluehair.forum.dto.ForumSaveRequestDto;
+import com.example.projectbluehair.comment.entity.Comment;
 import com.example.projectbluehair.forum.dto.ForumUpdateRequestDto;
 import com.example.projectbluehair.member.entity.Member;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
 import javax.persistence.*;

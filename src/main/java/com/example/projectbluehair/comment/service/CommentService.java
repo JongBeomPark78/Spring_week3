@@ -21,7 +21,6 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 @PropertySource("classpath:auth.properties")
 public class CommentService {
-
     private final CommentRepository commentRepository;
     private final ForumRepository forumRepository;
     private final MemberRepository memberRepository;

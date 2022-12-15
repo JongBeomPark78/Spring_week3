@@ -2,6 +2,7 @@ package com.example.projectbluehair;
 
 import com.example.projectbluehair.comment.dto.CommentSaveRequestDto;
 import com.example.projectbluehair.comment.entity.Comment;
+import com.example.projectbluehair.comment.repository.CommentLikeRepository;
 import com.example.projectbluehair.comment.repository.CommentRepository;
 import com.example.projectbluehair.common.exception.CommonErrorCode;
 import com.example.projectbluehair.common.exception.CustomException;
@@ -47,6 +48,9 @@ public class ProjectBlueHairApplication {
 
     @Resource
     private CommentRepository commentRepository;
+
+    @Resource
+    private CommentLikeRepository commentLikeRepository;
 
     @Bean
     public ApplicationRunner applicationRunner() {
@@ -110,6 +114,11 @@ public class ProjectBlueHairApplication {
                 Comment comment = new Comment(content, member, forum);
                 commentRepository.save(comment);
             }
+
+            //댓글 좋아요 저장
+
+
+
         };
     }
 
