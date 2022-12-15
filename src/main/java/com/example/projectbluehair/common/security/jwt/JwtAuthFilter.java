@@ -1,13 +1,11 @@
 package com.example.projectbluehair.common.security.jwt;
 
-import com.example.projectbluehair.common.security.exception.CustomAuthenticationEntryPoint;
-import com.example.projectbluehair.common.security.exception.CustomSecurityException;
 import com.example.projectbluehair.common.security.exception.CustomSecurityErrorCode;
+import com.example.projectbluehair.common.security.exception.CustomSecurityException;
 import io.jsonwebtoken.Claims;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
