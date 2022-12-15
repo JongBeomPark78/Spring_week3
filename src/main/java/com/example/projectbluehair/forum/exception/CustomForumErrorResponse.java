@@ -16,10 +16,10 @@ public class CustomForumErrorResponse {
     private final String code;
     private final String message;
 
-    public static ResponseEntity<com.example.projectbluehair.forum.exception.CustomForumErrorResponse> toResponseEntity(CustomForumErrorCode errorCode) {
+    public static ResponseEntity<CustomForumErrorResponse> toResponseEntity(CustomForumErrorCode errorCode) {
         return ResponseEntity
                 .status(errorCode.getHttpStatus())
-                .body(com.example.projectbluehair.forum.exception.CustomForumErrorResponse.builder()
+                .body(CustomForumErrorResponse.builder()
                         .status(errorCode.getHttpStatus().value())
                         .error(errorCode.getHttpStatus().name())
                         .code(errorCode.name())

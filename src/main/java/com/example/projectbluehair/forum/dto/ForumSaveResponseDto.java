@@ -1,7 +1,7 @@
 package com.example.projectbluehair.forum.dto;
 
-import com.example.projectbluehair.comment.entity.Comment;
 import com.example.projectbluehair.forum.entity.Forum;
+import com.example.projectbluehair.comment.entity.Comment;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.ToString;
